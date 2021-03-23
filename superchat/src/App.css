@@ -61,7 +61,7 @@ main::-webkit-scrollbar-thumb {
 
 form {
   border-radius: 0px 0px 30px 30px;
-  top: 81vh;
+  top: 83%;
   height: 7vh;
   position: fixed;
   bottom: 0;
@@ -134,7 +134,8 @@ button {
   color: #282c34;
   background: white;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 50vh auto;
+  height: auto;
 }
 
 .logo {

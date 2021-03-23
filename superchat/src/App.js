@@ -32,18 +32,25 @@ function App() {
 
   return (
     <div className="App">
+      {user ? <Header /> : ""}
+        {user ? <ChatRoom /> : <SignIn />}
+    </div>
+  );
+}
+
+function Header() {
+
+
+  return(
+    <>
       <header>
         <img className="logo" src={logo} />
         <h1 className="logo"></h1>
         <SignOut />
       </header>
+    </>
+  )
 
-      <section>
-        {user ? <ChatRoom /> : <SignIn />}
-      </section>
-
-    </div>
-  );
 }
 
 function SignIn() {
@@ -95,6 +102,7 @@ function ChatRoom() {
   }
 
   return (<>
+  <section>
     <main>
 
       {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
@@ -110,6 +118,7 @@ function ChatRoom() {
       <button className="submitmessage" type="submit" disabled={!formValue}></button>
 
     </form>
+  </section>
   </>)
 }
 
