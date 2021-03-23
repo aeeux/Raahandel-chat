@@ -57,6 +57,29 @@ function SignOut() {
   )
 }
 
-function ChatRoom() {}
+function ChatRoom() {
+
+  const messageRef = firestore.collection('messages');
+  const query = messagesRef.orderBy('createdArt').limit(25);
+
+  const [messages] = useCollectionData(query, {idField: 'id'}); //listen to data with a hook, React will observe the changes in realtime.
+
+  return (
+    <>
+      <div>
+        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+      </div>
+
+      <div>
+
+      </div>
+    </>
+  )
+}
+
+function ChatMessage(props) {
+  
+
+}
 
 export default App;
