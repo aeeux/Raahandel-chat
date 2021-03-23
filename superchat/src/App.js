@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
+import logo from './images/råhandel-logo.png'; // logo import
+import icon from './images/submit-icon.png'; // submit text icon import
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -31,7 +33,8 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>🔥</h1>
+        <img className="logo" src={logo} />
+        <h1 className="logo"></h1>
         <SignOut />
       </header>
 
@@ -53,7 +56,6 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Chat</button>
-      <p>Chat</p>
     </>
   )
 
@@ -61,7 +63,7 @@ function SignIn() {
 
 function SignOut() {
   return auth.currentUser && (
-    <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
+    <button className="sign-out" onClick={() => auth.signOut()}>Log ud</button>
   )
 }
 
@@ -103,9 +105,9 @@ function ChatRoom() {
 
     <form onSubmit={sendMessage}>
 
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Skriv til producenten.." />
 
-      <button type="submit" disabled={!formValue}>➡️</button>
+      <button className="submitmessage" type="submit" disabled={!formValue}></button>
 
     </form>
   </>)
@@ -119,7 +121,7 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+      <img className="profile-img" src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} alt="adorable" />
       <p>{text}</p>
     </div>
   </>)
