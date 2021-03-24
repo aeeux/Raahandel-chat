@@ -14,7 +14,6 @@ body {
   background-color: #3a3a3a;
   height: 10vh;
   min-height: 50px;
-  color: white;
   position: fixed;
   width: 100%;
   max-width: 728px;
@@ -56,7 +55,8 @@ main::-webkit-scrollbar-track {
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #0b93f6;
+  background: #478658;
+  border-radius: 30px;
 }
 
 form {
@@ -131,8 +131,8 @@ button {
 }
 
 .sign-in {
-  color: #282c34;
-  background: white;
+  color: #dddddd;
+  background: #478658;
   max-width: 400px;
   margin: 50vh auto;
   height: auto;
@@ -180,7 +180,7 @@ p {
 
 .sent p {
   color: white;
-  background: #0b93f6;
+  background: #478658;
   align-self: flex-end;
 }
 
