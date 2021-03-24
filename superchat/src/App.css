@@ -94,6 +94,7 @@ input {
 }
 
 .submitmessage {
+  width: 8%;
   background-color: #303030;
   border: none;
   color: white;
@@ -103,7 +104,6 @@ input {
   display: inline-block;
   cursor: pointer;
   font-size: 1.25rem;
-  border-radius: 30px;
   background: url("./images/submit-icon.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
